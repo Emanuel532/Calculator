@@ -15,17 +15,6 @@ button {
     cursor: pointer;
 }
 
-#zero {
-    width: 204px;
-    margin-right: 30px;
-    padding-right: 110px;
-
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 60px;
-}
-
 .grayBtn {
     background-color: #a9a8a9;
     margin-right: 15px;
@@ -42,6 +31,16 @@ button {
     color: white;
 }
 
+.zero {
+    width: 204px;
+    margin-right: 30px;
+    padding-right: 110px;
+
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 60px;
+}
 
 .container {
     display: flex;
@@ -59,8 +58,17 @@ button {
     background-color: black;
     color: white;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 80px;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 100px;
+}
+
+.display .bot {
+    margin: 0;
+}
+
+.display .top {
+    font-size: 40px;
 }
 
