@@ -11,6 +11,8 @@ let displayValueTop = "";
 for(let i = 0; i <= 9; i++) {
     let button = document.getElementById(i.toString());
     button.addEventListener( 'click', () => {
+        if(displayValueBot.toString().length <= 22) {
+        
         
         if(gotOperationSign(displayValueTop))
             digitButtonPressed(i);
@@ -18,6 +20,7 @@ for(let i = 0; i <= 9; i++) {
             alert("Choose operation first!");
         else 
             digitButtonPressed(i);
+        }
     });
 }
 
@@ -181,7 +184,7 @@ let equalFunction = () => {
             displayValueBot = "";
             redraw();
         } else if (gotOperationSign(displayValueTop) == '%') {
-            if(displayValueBot=='') displayValueBot = '1'
+            if(displayValueBot=='') displayValueBot = displayValueTop.toString().split(" ")[0]+'0';
             displayValueTop = operate( displayValueTop.toString().split(" ")[0], displayValueBot, reminder );
             displayValueBot = "";
             redraw();
@@ -240,6 +243,11 @@ let redraw = () => {
 
     let top = display[0].getElementsByClassName("top");
     top[0].innerHTML = displayValueTop;
+
+    if(displayValueBot.toString().length < 8) {
+        let top = document.getElementById("bott");
+        top.style.fontSize ='100px';
+    }
 };
 
 let digitButtonPressed = (digit) => {
