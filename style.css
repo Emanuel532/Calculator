@@ -42,6 +42,10 @@ button {
     border-radius: 60px;
 }
 
+.smallerBot {
+    font-size: 40px;
+}
+
 .container {
     display: flex;
     align-items: center;

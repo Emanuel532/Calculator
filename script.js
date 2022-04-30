@@ -201,6 +201,16 @@ dotBtn.addEventListener('click', () => {
     }
 });
 
+
+// resize displayvaluebot
+let numpadBtns = document.getElementsByClassName("buttons")[0];
+numpadBtns.addEventListener('click', () => {
+    if(displayValueBot.toString().length >= 8) {
+        let top = document.getElementById("bott");
+        top.style.fontSize ='40px';
+    }
+});
+
 //miscellaneous funcs
 
 let resetAll = () => {
