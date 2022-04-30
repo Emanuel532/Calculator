@@ -27,6 +27,19 @@ ACBtn.addEventListener( 'click', () => {
     resetAll();
 })
 
+//plusminusbtn
+let plusminusBtn = document.getElementById("plusminus");
+plusminusBtn.addEventListener('click', () => {
+    if(displayValueBot != '' && displayValueBot != '0') {
+        if(displayValueBot.toString()[0] != '-') {
+            displayValueBot = '-' + displayValueBot.toString();
+        } else {
+            displayValueBot = displayValueBot.substring(1);
+        }
+        redraw();
+    }
+});
+
 //addition button
 let addBtn = document.getElementById("addition");
 addBtn.addEventListener( 'click', () => {
